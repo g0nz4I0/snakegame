@@ -6,13 +6,14 @@
 
 void Game::initialiseBoard()//create the board
 {
-	
+	posPlayerX = 10;
+	posPlayerY = 10;
 
 	for(int i = 0;i!=20;i++)
 	{
 		for(int j = 0;j!= 20;j++)
 		{
-			board[i][j] = 32 ;//the board is made of spaces, it is 40x40 square
+			board[i][j] = 32 ;//the board is made of spaces, it is 20x20 square
 		}
 	}
 
@@ -26,11 +27,18 @@ void Game::displayBoard()//display an array
 	{
 		for(int j = 0;j!= 20;j++)
 		{
-			std::cout<<board[i][j]<<" ";
+				if(posPlayerX== i && posPlayerY== j)
+				{
+					board[i][j] == 79;
+				}
+				std::cout<<board[i][j]<<" ";
 		
 		}
 		std::cout<<std::endl;
+		
 	}
+	
+	//display where the  board ends
 	for(int i = 0;i!= 20;i++)
 		std::cout<<"- ";
 	std::cout<<"\n";

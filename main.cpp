@@ -11,7 +11,7 @@ int main()
 	
 	snake.initialiseBoard();
 	snake.displayBoard();
-	
+	std::cout<<"1";
 	
 	while(snake.isGameFinished != true)
 	{
