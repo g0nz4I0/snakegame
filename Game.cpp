@@ -2,6 +2,12 @@
 #include<string>
 #include<conio.h>
 
+/* 
+TODO (gonzalo#1#):
+		 make that when posX && posY match one 
+        square then change the symbol 
+					  					  
+ */
 #include "Game.h"
 
 void Game::initialiseBoard()//create the board
@@ -13,24 +19,26 @@ void Game::initialiseBoard()//create the board
 	{
 		for(int j = 0;j!= 20;j++)
 		{
-			board[i][j] = 32 ;//the board is made of spaces, it is 20x20 square
+			board[i][j] = 79 ;//the board is made of spaces, it is 20x20 square
 		}
 	}
 
 }
 void Game::displayBoard()//display an array
 {
+	posPlayerX = 10;
+	posPlayerY = 10;
 
 	system("CLS");
-	
+	//fix this
 	for(int i = 0;i!=20;i++)
 	{
 		for(int j = 0;j!= 20;j++)
 		{
-				if(posPlayerX== i && posPlayerY== j)
-				{
-					board[i][j] == 79;
-				}
+			
+			//fix this shit to change the character inside the array
+				board[0][0] == 32;
+				
 				std::cout<<board[i][j]<<" ";
 		
 		}
