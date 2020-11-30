@@ -6,12 +6,11 @@
 int main()
 {
 	Game snake;
-	Board board;
 	snake.createMenu();
 	
 	
-	board.initialiseBoard();
-	board.displayBoard();
+	snake.initialiseBoard();
+	snake.displayBoard();
 	
 	
 	while(snake.isGameFinished != true)
@@ -19,6 +18,7 @@ int main()
 	
 		snake.directionKey = getch();//wait for a key to be pressed but dont wait for enter
 		snake.move();
+		snake.displayBoard();
 		
 	}
 

@@ -12,7 +12,7 @@ class Game
 		std::string username;
 		int posPlayerX = 0;
 		int posPlayerY = 0;
-		char board [40][40];
+		char board [20][20];
 		
 		int score = 0;
 		
@@ -27,17 +27,16 @@ class Game
 		
 		void gameOver();
 		
-		
+		//board functions
 	
-
-	
-};
-
-class Board : public Game
-{
-	public:
 		void initialiseBoard();
 		void displayBoard();
-	
+
 	
 };
+
+
+
+	
+	
+

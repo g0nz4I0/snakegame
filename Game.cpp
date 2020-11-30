@@ -4,33 +4,34 @@
 
 #include "Game.h"
 
-void Board::initialiseBoard()//create the board
+void Game::initialiseBoard()//create the board
 {
 	
 
-	for(int i = 0;i!=40;i++)
+	for(int i = 0;i!=20;i++)
 	{
-		for(int j = 0;j!= 40;j++)
+		for(int j = 0;j!= 20;j++)
 		{
 			board[i][j] = 32 ;//the board is made of spaces, it is 40x40 square
 		}
 	}
 
 }
-void Board::displayBoard()//display an array
+void Game::displayBoard()//display an array
 {
 
+	system("CLS");
 	
-	for(int i = 0;i!=40;i++)
+	for(int i = 0;i!=20;i++)
 	{
-		for(int j = 0;j!= 40;j++)
+		for(int j = 0;j!= 20;j++)
 		{
 			std::cout<<board[i][j]<<" ";
 		
 		}
 		std::cout<<std::endl;
 	}
-	for(int i = 0;i!= 40;i++)
+	for(int i = 0;i!= 20;i++)
 		std::cout<<"- ";
 	std::cout<<"\n";
 }
